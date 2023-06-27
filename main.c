@@ -798,7 +798,7 @@ int detCaida(Jugador *pj, int accExtra) {
 // Realiza el turno del jugador o enemigo
 void turnoPj(Jugador *pj, Jugador *enemigo) {
   int opc;
-    char buffer[999];
+  char buffer[999];
 
   // Define que accion extra tiene el personaje
   int accExtra = 0;
@@ -1244,6 +1244,7 @@ Jugador *crearJugador() {
   espada->cantidad = 0;
   insertMap(pj->items, espada->nombre, espada);
   insertMap(pj->equipo, "Espada", espada);
+  pj->desarmadoPrin = 0;
   Objeto *pocion = (Objeto *)malloc(sizeof(Objeto));
   pocion->nombre = "Pocion";
   pocion->atk = 0;
